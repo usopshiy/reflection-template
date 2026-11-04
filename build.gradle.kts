@@ -1,5 +1,16 @@
 plugins {
     id("java")
+    id("application")
+}
+
+java {
+    toolchain {
+        languageVersion.set(JavaLanguageVersion.of(21))
+    }
+}
+
+application {
+    mainClass.set("org.example.GenerateExample")
 }
 
 group = "org.example"
